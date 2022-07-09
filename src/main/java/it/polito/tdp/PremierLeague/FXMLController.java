@@ -44,6 +44,9 @@ public class FXMLController {
 
     @FXML
     void doCreaGrafo(ActionEvent event) {
+    	
+    	txtResult.clear();
+    	txtResult.setText(model.creaGrafo(Double.parseDouble(txtGoals.getText()) ));
 
     }
 
@@ -54,7 +57,8 @@ public class FXMLController {
 
     @FXML
     void doTopPlayer(ActionEvent event) {
-
+    	
+    	txtResult.appendText(model.topPlayer());
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
